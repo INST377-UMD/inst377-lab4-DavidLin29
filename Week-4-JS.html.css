@@ -1,0 +1,11 @@
+body {
+    background-color: aqua;
+}
+
+.frag-area{
+    background-color: blueviolet;
+    border: 2px solid white;
+    padding: 50px;
+    position: relative;
+    float:left;
+}
