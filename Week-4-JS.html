@@ -10,6 +10,7 @@
             <h1 id="wordshehe">INST377-Lab 4</h1>
         </header>
         <div class="main-area">
+            <!--  -->
             <div class="frag-area">
                 <form name="nameForm">
                     <label>Name:</label>
@@ -33,7 +34,7 @@
                 <button onclick="addingText()">Add Text</button>
             </div>
         </div>
-        <!--Wait this is actually so cool, we should have a small lecture on inputs it was there on w3 but this is honestly very useful and would make the laabs more fun-->
+       
         <!-- Script for Alert Button -->
         <script type="text/javascript">
             function alerts(){
@@ -68,9 +69,11 @@
             }
         </script>
 
+        <!-- Changing the text of header script -->
+
         <script type="text/javascript">
             function addingText(){
-                const headertext = document.getElementsById('wordshehe');
+                const headertext = document.getElementById('wordshehe');
                 if(headertext.textContent === 'INST377-Lab 4') {
                     headertext.textContent = 'INST377-Lab 4 - Adding Text';
                 }
