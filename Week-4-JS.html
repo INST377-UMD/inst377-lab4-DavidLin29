@@ -39,6 +39,10 @@
         <script type="text/javascript">
             function alerts(){
                 const name = document.getElementById('firstName').value;
+                if(name ==="") {
+                    alert('Hey please input an actual name')
+                    return false;
+                }
                 alert(`Hi ${name}!`)
 
             }
