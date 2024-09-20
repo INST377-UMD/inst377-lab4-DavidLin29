@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Lab4_Javascript_Practice</title>
+        <link rel="stylesheet" href="Week-4-JS.html.css">
+    </head>
+
+    <body>
+        <!-- Header that just has one heading nothing else -->
+        <header id="bar">
+            <h1 id="wordshehe">INST377-Lab 4</h1>
+        </header>
+        <div class="main-area">
+            <!--  -->
+            <div class="frag-area">
+                <form name="nameForm">
+                    <label>Name:</label>
+                    <input type="text" placeholder="Name" id="firstName" required>
+                    <button type="button" onclick="alerts()">Alert Me!</button>
+
+                </form>
+            </div>
+
+            <div class="frag-area">
+                <form name="textTester">
+                    <label>Text Tester:</label>
+                    <input type="text" placeholder="Text" id="textlol" required>
+                    <button type="button" onclick="textValidate()">Validate Text</button>
+                </form>
+            </div>
+            <div class="frag-area">
+                <button type ='button' onclick="colorChange()">Change color</button>
+            </div>
+            <div class="frag-area">
+                <button onclick="addingText()">Add Text</button>
+            </div>
+        </div>
+       
+        <!-- Script for Alert Button -->
+        <script type="text/javascript">
+            function alerts(){
+                const name = document.getElementById('firstName').value;
+                if(name ==="") {
+                    alert('Hey please input an actual name')
+                    return false;
+                }
+                alert(`Hi ${name}!`)
+
+            }
+        </script>
+
+        <!-- Script for Text Validate -->
+
+        <script type="text/javascript">
+            function textValidate(){
+                const validationRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                if(validationRegex.test(document.textTester.textlol.value)) {
+                    alert('How about Nahhh');
+                    return false;
+                }
+            return true;
+
+            }
+
+        </script>
+        <!-- Changing Color Script -->
+        <script type="text/javascript">
+            function colorChange(){
+                if(document.body.style.background =='blue') {
+                    const t = document.body.style.background = 'green';
+                } else {
+                    const t = document.body.style.background = 'blue';
+                }
+            }
+        </script>
+
+        <!-- Changing the text of header script -->
+
+        <script type="text/javascript">
+            function addingText(){
+                const headertext = document.getElementById('wordshehe');
+                if(headertext.textContent === 'INST377-Lab 4') {
+                    headertext.textContent = 'INST377-Lab 4 - Adding Text';
+                }
+                
+            }
+
+        </script>
+
+    </body>
+</html>
